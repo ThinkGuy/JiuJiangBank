@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="creditCard" extends="struts-default" namespace="/CreditCard">
+		<action name="*_*" class="com.ob.action.{1}Action" method="{2}">
+			<!-- 信用卡挂失 -->
+			<result>/CreditCard/cdloss/cdloss.jsp</result>
+			<result name="showCreditCardLoss">/CreditCard/cdloss/showCreditCard.jsp</result>
+			<result name="selectOkLoss">/CreditCard/cdloss/confirmPassword.jsp</result>
+			<result name="confirmFailedLoss">/CreditCard/cdloss/confirmPassword.jsp</result>
+			<result name="confirmSuccessLoss">/CreditCard/cdloss/lossSuccess.jsp</result>
+
+			<!-- 信用卡激活 -->
+			<result name="showCreditCardActive">/CreditCard/cdActive/showCreditCard.jsp</result>
+			<result name="selectOkActive">/CreditCard/cdActive/setDealPassword.jsp</result>
+			<result name="dealPasswordSetFailedActive">/CreditCard/cdActive/setDealPassword.jsp</result>
+			<result name="dealPasswordSetSuccessActive">/CreditCard/cdActive/setSearchPassword.jsp
+			</result>
+			<result name="searchPasswordSetFailedActive">/CreditCard/cdActive/setSearchPassword.jsp
+			</result>
+			<result name="searchPasswordSetSuccessActive">/CreditCard/cdActive/activeSuccess.jsp</result>
+
+			<!-- 信用卡查询密码设置 -->
+			<result name="showCreditCardSearchPasswordSet">/CreditCard/cdSearchPassword/showCreditCard.jsp
+			</result>
+			<result name="selectSearchPassword">/CreditCard/cdSearchPassword/changePassword.jsp
+			</result>
+			<result name="changeSearchPasswordFailed">/CreditCard/cdSearchPassword/changePassword.jsp
+			</result>
+			<result name="changeSearchPasswordSuccess">/CreditCard/cdSearchPassword/changeSearchPasswordSuccess.jsp
+			</result>
+
+			<!-- 信用卡交易密码设置 -->
+			<result name="showCreditCardDealPasswordSet">/CreditCard/cdDealPassword/showCreditCard.jsp
+			</result>
+			<result name="selectChangeDealPassword">/CreditCard/cdDealPassword/changePassword.jsp
+			</result>
+			<result name="selectCancelDealPassword">/CreditCard/cdDealPassword/confirmPassword.jsp
+			</result>
+			<result name="confirmFailedCancelDPWD">/CreditCard/cdDealPassword/confirmPassword.jsp
+			</result>
+			<result name="confirmSuccessCancelDPWD">/CreditCard/cdDealPassword/cancelDPWDSuccess.jsp
+			</result>
+			<result name="selectFaildDealPassword">/CreditCard/cdDealPassword/showCreditCard.jsp
+			</result>
+			<result name="dealPasswordSetFailed">/CreditCard/cdDealPassword/confirmPassword.jsp
+			</result>
+			<result name="dealPasswordSetSuccess">/CreditCard/cdDealPassword/dealPasswordSetSuccess.jsp
+			</result>
+
+			<!-- 信用卡积分显示 -->
+			<result name="showCreditCardIntegration">/CreditCard/cdIntegration/showCreditCard.jsp
+			</result>
+			<result name="selectOkIntegration">/CreditCard/cdIntegration/showIntegration.jsp
+			</result>
+
+			<!-- 信用卡额度查询 -->
+			<result name="showCreditCardSearchLimit">/CreditCard/cdLimit/showCreditCardSearch.jsp
+			</result>
+			<result name="selectOkLimit">/CreditCard/cdLimit/showLimit.jsp</result>
+
+			<!-- 信用卡额度设置 -->
+			<result name="showCreditCardSetLimit">/CreditCard/cdLimit/showCreditCardSet.jsp
+			</result>
+			<result name="selectOkLimitSet">/CreditCard/cdLimit/confirmPassword.jsp</result>
+			<result name="confirmFailedLimit">/CreditCard/cdLimit/confirmPassword.jsp</result>
+			<result name="confirmSuccessLimit">/CreditCard/cdLimit/showLimit.jsp</result>
+
+			<!-- 未出账单查询 -->
+			<result name="showCreditCardBillYet">/CreditCard/cdBillYet/showCreditCard.jsp</result>
+			<result name="selectOkBillYet">/CreditCard/cdBillYet/confirmPassword.jsp
+			</result>
+			<result name="confirmFailedBillYet">/CreditCard/cdBillYet/confirmPassword.jsp
+			</result>
+			<result name="confirmSuccessBillYet">/CreditCard/cdBillYet/displayBillYet.jsp</result>
+
+			<!-- 已出账单查询 -->
+			<result name="showCreditCardBillHave">/CreditCard/cdBillHave/showCreditCard.jsp
+			</result>
+			<result name="selectOkBillHave">/CreditCard/cdBillHave/confirmPassword.jsp
+			</result>
+			<result name="confirmFailedBillHave">/CreditCard/cdBillHave/confirmPassword.jsp
+			</result>
+			<result name="confirmSuccessBillHave">/CreditCard/cdBillHave/displayBillHave.jsp
+			</result>
+		</action>
+	</package>
+</struts>    
